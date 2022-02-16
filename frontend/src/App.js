@@ -70,4 +70,6 @@ export default App
 /* 
 mongoDB username and password :
 paul123 : paul123
+
+create .env
 */

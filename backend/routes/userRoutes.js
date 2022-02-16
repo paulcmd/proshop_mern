@@ -16,7 +16,7 @@ router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/login', authUser)
 router
   .route('/profile')
-  .get(protect, getUserProfile)
+  .get(protect, getUserProfile) // getUserDetails in userActions
   .put(protect, updateUserProfile)  // user can make these changes. .route.get.put are on the same line
 router
   .route('/:id')

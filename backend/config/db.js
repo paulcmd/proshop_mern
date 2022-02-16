@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDB = async () => {   // the crud operations will always return a promise
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect('mongodb+srv://paul123:paul123@cluster0.y0hfe.mongodb.net/proshop', {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true,

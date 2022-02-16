@@ -33,9 +33,9 @@ const ProfileScreen = ({ location, history }) => {
     if (!userInfo) {
       history.push('/login')  // if we dont have a user, and we try to access this page, we will be redirected to login page
     } else {
-      if (!user || !user.name || success) {    // if we dont have a user, or we have a user but we dont have the user details, or we have updated the user details successfully
-        dispatch({ type: USER_UPDATE_PROFILE_RESET })
-        dispatch(getUserDetails('profile'))
+      if (!user || !user.name || success) {    // if we dont have a user, or user name, or we have updated the user details successfully
+        dispatch({ type: USER_UPDATE_PROFILE_RESET })  //reset the profile updating reducer to empty obj
+        dispatch(getUserDetails('profile'))  //get user details to populate user name and email
         dispatch(listMyOrders())
       } else {
         setName(user.name)
@@ -49,7 +49,7 @@ const ProfileScreen = ({ location, history }) => {
     if (password !== confirmPassword) {
       setMessage('Passwords do not match')
     } else {
-      dispatch(updateUserProfile({ id: user._id, name, email, password }))
+      dispatch(updateUserProfile({ id: user._id, name, email, password })) // update name, email, pass
     }
   }
 
