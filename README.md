@@ -1,2 +1,2 @@
-# proshop_mern
  
+This MERN stack e-commerce web application, leverages MongoDB, Express.js, React, and Node.js to offer a comprehensive online shopping platform. It includes user authentication, product listings, a shopping cart, and checkout functionalities. The React frontend ensures a smooth and responsive user experience, while the backend, built with Node.js and Express, manages API requests and interacts with MongoDB for data persistence. Key features include real-time product updates and secure payment processing.
